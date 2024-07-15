@@ -32,7 +32,7 @@ try{
   DateTime dateformat = DateTime.now();
   date = DateTimeFormat.format(dateformat,format: "l, d M");
   print(date);
-  Response response = await get(Uri.parse('https://api.openweathermap.org/data/2.5/weather?q=$cityname&appid=9a997751786e636840ea481cbe506c1c'));
+  Response response = await get(Uri.parse('https://api.openweathermap.org/data/2.5/weather?q=$cityname&appid=MYAPITOKEN'));
   Map<dynamic,dynamic> data = jsonDecode(response.body);
   print(data);
   cityname = data['name'];
