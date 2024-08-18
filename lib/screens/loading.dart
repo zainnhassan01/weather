@@ -12,7 +12,7 @@ class _loadingState extends State<loading> {
 
 void callservices() async
 {
-  Weather i = Weather(cityname: "Islamabad");
+  Weather i = Weather(cityname: "Dubai");
   await i.getweatherdata();
   Navigator.pushReplacementNamed(context, '/home',arguments: {
     "cityname" : i.cityname, 
@@ -29,6 +29,7 @@ void callservices() async
     "sunset" : i.sunset,
     "sunrise" : i.sunrise,
     "date" : i.date, 
+    "pressure":i.pressure
   });
 }
 @override

@@ -24,15 +24,16 @@ class Weather {
   String? sunrise;
   String? sunset;
   int? timezone;
+  String? pressure;
   Weather({this.cityname});
 
 Future<void> getweatherdata() async {
 try{
   double temp;int t;
   DateTime dateformat = DateTime.now();
-  date = DateTimeFormat.format(dateformat,format: "l, d M");
+  date = DateTimeFormat.format(dateformat,format: "l j · g.i a");
   print(date);
-  Response response = await get(Uri.parse('https://api.openweathermap.org/data/2.5/weather?q=$cityname&appid=MYAPITOKEN'));
+  Response response = await get(Uri.parse('https://api.openweathermap.org/data/2.5/weather?q=$cityname&appid=9a997751786e636840ea481cbe506c1c'));
   Map<dynamic,dynamic> data = jsonDecode(response.body);
   print(data);
   cityname = data['name'];
@@ -90,6 +91,7 @@ try{
   maxtemp = t.toString();
   print("max temp $maxtemp");
   humidity = temperatures['humidity'].toString();
+  pressure = (temperatures['pressure'] * 0.02953).toString();
   weatherList = data['weather'];
   weatherinfo = weatherList[0];
   mainweather = weatherinfo['main'];
