@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:weatherapp/res/colors.dart';
 import 'package:weatherapp/res/images.dart';
 import 'package:weatherapp/res/textstyle.dart';
+import 'package:weatherapp/screens/locations.dart';
 
 class home extends StatefulWidget {
   const home({super.key});
@@ -41,12 +42,14 @@ class _homeState extends State<home> {
                                   color: Colors.grey[200],
                                   height: height * 0.024)
                               .normal
-
-                          // GoogleFonts.inter(
-                          //     color: Colors.grey[300], fontSize: height * 0.024),
                           ),
                       IconButton(
-                          onPressed: () {},
+                          onPressed: () async{
+                            dynamic  result = await Navigator.pushNamed(context, '/location');
+                            setState(() {
+                              data = result;
+                            });
+                          },
                           icon: Icon(
                             Icons.arrow_outward_outlined,
                             color: Colors.white,
@@ -67,11 +70,11 @@ class _homeState extends State<home> {
                             height: height * 0.27,
                             width: width * 0.6,
                             child: Image.asset(
-                              ImageAssets.cloudwithsun,
+                              ImageAssets.sunwithclouds,
                               fit: BoxFit.cover,
                             )),
                             SizedBox(
-                    height: height * 0.05,
+                    height: height * 0.01,
                   ),
                         Text(
                           "${data['maintemp']}° C",
@@ -187,7 +190,7 @@ class _homeState extends State<home> {
                            crossAxisAlignment: CrossAxisAlignment.start,
                            children: [
                              Text("Feels Like",style: FontStyles(height: height * 0.02,color: Colors.grey[600]).normal,),
-                              Text("${data['feelslike']}%",style: FontStyles(height: height * 0.025).normal,),
+                              Text("${data['feelslike']}° C",style: FontStyles(height: height * 0.025).normal,),
                            ],
                          ),
                       ],

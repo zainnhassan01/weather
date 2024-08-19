@@ -1,9 +1,12 @@
 class ImageAssets {
   static const sun = "assets/images/sun.png";
-  static const cloud = "assets/images/cloud.png";
+  static const breeze = "assets/images/breeze.png";
+  static const moon = "assets/images/moon.png";
+  static const moonwithclouds = "assets/images/moonwithclouds.png";
+  static const rain = "assets/images/moonwithclouds.png";
+  static const rainwithclouds = "assets/images/moonwithclouds.png";
+  static const snow = "assets/images/snow.png";
   static const lightrain = "assets/images/lightrain.png";
-  static const nightthunderstorm = "assets/images/200.png";
-  static const moon = "assets/images/baseMoon.png";
-  static const cloudwithsun = "assets/images/cloudwithsun.png";
-  static const thunderstorm = "assets/images/thunderstorm";
+  static const sunwithclouds = "assets/images/sunwithclouds.png";
+  static const sunwithlightrain = "assets/images/sunwithlightrain";
 }
