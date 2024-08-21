@@ -66,7 +66,7 @@ class _loadingState extends State<loading> {
             const Text(
               "WEATHER APP",
               style: TextStyle(
-                  color: Colors.white,
+                  color: Color.fromARGB(255, 162, 162, 162),
                   fontSize: 30,
                   fontWeight: FontWeight.bold),
             ),
