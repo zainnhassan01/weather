@@ -32,7 +32,7 @@ try{
   double temp;int t;
   DateTime dateformat = DateTime.now();
   date = DateTimeFormat.format(dateformat,format: "l j · g.i a");
-  Response response = await get(Uri.parse('https://api.openweathermap.org/data/2.5/weather?q=$cityname&appid=9a997751786e636840ea481cbe506c1c'));
+  Response response = await get(Uri.parse('https://api.openweathermap.org/data/2.5/weather?q=$cityname&appid=id'));
   Map<dynamic,dynamic> data = jsonDecode(response.body);
   print(data);
   cityname = data['name'];
