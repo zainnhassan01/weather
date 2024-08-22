@@ -1,16 +1,15 @@
-# weatherapp
+## Weather App 🌦️
+# Overview
+This Flutter-based weather app provides real-time weather updates for over 22,600 cities across the globe. Whether you're planning your day or just curious about the weather in a specific location, this app has you covered. The app also includes location-based weather details, giving you instant access to the current weather wherever you are.
 
-A new Flutter project.
+# Features
+🌍 Global Coverage: Get weather updates from 22,600 cities worldwide.
+📍 Location-Based Updates: Automatically fetches weather information based on your current location.
+🎨 Beautiful UI: A sleek and modern design that enhances the user experience.
+Tech Stack
+Flutter: The app is built entirely using Flutter, ensuring a smooth and responsive experience across different devices.
+API Integration: The app fetches real-time data from a reliable weather API.
+GetX: For efficient state management and dependency injection.
 
-## Getting Started
+https://github.com/user-attachments/assets/63369e07-cae3-4a99-a3ad-159a692c018a
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
